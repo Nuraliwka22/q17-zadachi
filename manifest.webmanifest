@@ -1,0 +1,15 @@
+{
+  "name": "Q17 Задачи",
+  "short_name": "Q17 Задачи",
+  "description": "Задачи и напоминания по объектам Q17",
+  "lang": "ru",
+  "start_url": "./#/today",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f5f6f3",
+  "theme_color": "#1f5f4a",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ]
+}
