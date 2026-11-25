@@ -68,6 +68,10 @@ function errText(e) {
   const m = String(e?.message || e || "");
   if (/Failed to fetch|NetworkError|Load failed/i.test(m)) return "Нет связи с сервером. Проверьте интернет и повторите.";
   if (/JWT|session/i.test(m)) return "Сессия истекла. Войдите снова.";
+  if (/email address .* is invalid|invalid email/i.test(m)) return "Сервер не принял этот адрес почты. Укажите настоящий адрес.";
+  if (/already registered|already been registered/i.test(m)) return "Такой адрес уже зарегистрирован. Нажмите «Войти».";
+  if (/password should be|weak password/i.test(m)) return "Пароль слишком простой: нужно не меньше 6 символов.";
+  if (/rate limit|too many|security purposes/i.test(m)) return "Слишком много попыток подряд. Подождите минуту и повторите.";
   return m || "Неизвестная ошибка";
 }
 async function busy(btn, fn) {
